@@ -4,12 +4,13 @@ public class TaxCalculator {
 
 	private double taxRate;
 
-	public double getTaxRate() {
-		return taxRate;
+	public TaxCalculator(){
+		String tax = System.getProperty("tax.rate");
+		this.taxRate = Double.parseDouble(tax);
 	}
 
-	public void setTaxRate(double taxRate) {
-		this.taxRate = taxRate;
+	public double Calculate(double subtotal){
+		return subtotal * this.taxRate;
 	}
 
 }

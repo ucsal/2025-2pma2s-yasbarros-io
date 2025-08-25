@@ -13,6 +13,6 @@ public class ReceiptService {
 		double subtotal = order.getItems().stream().mapToDouble(i -> i.getUnitPrice() * i.getQuantity()).sum();
 		double tax = tc.Calculate(subtotal);
 		double total = subtotal + tax;
-		return rf.generate(order, subtotal, tax, total);
+		return rf.format(order, subtotal, tax, total);
 	}
 }

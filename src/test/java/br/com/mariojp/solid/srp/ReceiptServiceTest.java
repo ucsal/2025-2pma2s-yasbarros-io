@@ -1,7 +1,7 @@
 package br.com.mariojp.solid.srp;
 
+import static org.junit.jupiter.api.Assertions.assertTrue;
 import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.*;
 
 public class ReceiptServiceTest {
     @Test
